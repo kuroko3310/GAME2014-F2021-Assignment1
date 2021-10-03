@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1438414006118905464}
   - component: {fileID: 1438414006118905465}
   - component: {fileID: 1438414006118905466}
+  - component: {fileID: 8259339504620112167}
   m_Layer: 0
   m_Name: Mothership
   m_TagString: Untagged
@@ -97,3 +98,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.50443697, z: 0.2}
   m_Center: {x: 0, y: -0.039964914, z: 0}
+--- !u!114 &8259339504620112167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438414006118905467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7428396fd52345a43bf762c512421b85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreValue: 500
