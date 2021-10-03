@@ -30,70 +30,91 @@ public class AlienBehaviour : MonoBehaviour
     public static List<GameObject> allAliens = new List<GameObject>();
 
     // Start is called before the first frame update
+
+    
     void Start()
     {
-        foreach (GameObject go in GameObject.FindGameObjectsWithTag("Alien"))
-            allAliens.Add(go);
+        if (allAliens != null)
+        {
+            foreach (GameObject go in GameObject.FindGameObjectsWithTag("Alien"))
+                allAliens.Add(go);
+   
+        }
+        
+      
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (moveSpeed <= 0)
-            MoveEnemies();
-        if (shootSpeed <= 0)
-            Shoot();
-        if (mothershipTimer <= 0)
-            SpawnMothership();
+        if (allAliens != null)
+        {
+            if (moveSpeed <= 0)
+                MoveEnemies();
+            if (shootSpeed <= 0)
+                Shoot();
+            if (mothershipTimer <= 0)
+                SpawnMothership();
 
-        moveSpeed -= Time.deltaTime;
-        shootSpeed -= Time.deltaTime;
-        mothershipTimer -= Time.deltaTime;
+            moveSpeed -= Time.deltaTime;
+            shootSpeed -= Time.deltaTime;
+            mothershipTimer -= Time.deltaTime;
+        }
+       
     }
 
     private void MoveEnemies()
     {
-        if(allAliens.Count > 0)
+        if (allAliens != null)
         {
-            int hitMax = 0;
-            for (int i = 0; i < allAliens.Count; i++)
+            if (allAliens.Count > 0)
             {
-                if (isMovingRight)
-                    allAliens[i].transform.position += hMoveDistance;
-                else
-                    allAliens[i].transform.position -= hMoveDistance;
-                if (allAliens[i].transform.position.x > MAX_RIGHT || allAliens[i].transform.position.x < MAX_LEFT)
-                    hitMax++;
-            }
-            
-            if (hitMax > 0)
-            {
+                int hitMax = 0;
                 for (int i = 0; i < allAliens.Count; i++)
                 {
-                    allAliens[i].transform.position -= vMoveDistance;
+                    if (isMovingRight)
+                        allAliens[i].transform.position += hMoveDistance;
+                    else
+                        allAliens[i].transform.position -= hMoveDistance;
+                    if (allAliens[i].transform.position.x > MAX_RIGHT || allAliens[i].transform.position.x < MAX_LEFT)
+                        hitMax++;
                 }
-                isMovingRight = !isMovingRight;
-            }
 
-            moveSpeed = GetMoveSpeed();
+                if (hitMax > 0)
+                {
+                    for (int i = 0; i < allAliens.Count; i++)
+                    {
+                        allAliens[i].transform.position -= vMoveDistance;
+                    }
+                    isMovingRight = !isMovingRight;
+                }
+
+                moveSpeed = GetMoveSpeed();
+
+            }
+            
         }
         
     }
 
     private void Shoot()
     {
-        Vector2 pos = allAliens[Random.Range(0, allAliens.Count)].transform.position;
+        if (allAliens != null)
+        {
+            Vector2 pos = allAliens[Random.Range(0, allAliens.Count)].transform.position;
+            Instantiate(bulletPrefab, pos, Quaternion.identity);
 
-        Instantiate(bulletPrefab, pos, Quaternion.identity);
-
-        shootSpeed = shootRate;
+            shootSpeed = shootRate;
+        }
     }
 
     public void SpawnMothership()
     {
-        mothershipPrefab.transform.localScale = new Vector3(0.5f, 0.5f, 0f);
-        Instantiate(mothershipPrefab, mothershipSpawnPos, Quaternion.identity);
-        mothershipTimer = Random.Range(MOTHERSHIP_MIN, MOTHERSHIP_MAX);
+       
+            mothershipPrefab.transform.localScale = new Vector3(0.5f, 0.5f, 0f);
+            Instantiate(mothershipPrefab, mothershipSpawnPos, Quaternion.identity);
+            mothershipTimer = Random.Range(MOTHERSHIP_MIN, MOTHERSHIP_MAX);
+        
 
     }
 

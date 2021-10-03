@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "emulator-5554",
         "name": "com.JMProductions.GAME2014F2021Assignment1",
-        "processId": 3990,
+        "processId": 4369,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -78,6 +78,12 @@
             "deviceId": "emulator-5554",
             "name": "com.JMProductions.GAME2014F2021Assignment1",
             "processId": 3990,
+            "exited": false
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "com.JMProductions.GAME2014F2021Assignment1",
+            "processId": 4369,
             "exited": false
         }
     ],

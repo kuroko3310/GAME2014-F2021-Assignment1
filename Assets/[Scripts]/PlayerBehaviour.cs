@@ -32,7 +32,8 @@ public class PlayerBehaviour : MonoBehaviour
             transform.Translate(Vector2.left * Time.deltaTime * speed);
         if (isMovingRight && transform.position.x < MAX_RIGHT)
             transform.Translate(Vector2.right * Time.deltaTime * speed);
-
+        if (Input.GetKey("escape"))
+            Application.Quit();
     }
 
     private IEnumerator Shoot()

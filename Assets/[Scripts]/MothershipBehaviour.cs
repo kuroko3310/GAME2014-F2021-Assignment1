@@ -13,9 +13,12 @@ public class MothershipBehaviour : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.left * Time.deltaTime * speed);
-
-        if (transform.position.x <= MAX_LEFT)
-            Destroy(gameObject);
+        if (this != null)
+        {
+            if (transform.position.x <= MAX_LEFT)
+                Destroy(gameObject);
+        }
+       
     }
 
     private void OnCollisionEnter2D(Collision2D other)
