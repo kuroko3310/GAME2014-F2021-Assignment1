@@ -14,6 +14,7 @@ public class PlayerBulletBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.localScale = new Vector2(0.5f, 0.5f);
         transform.Translate(Vector2.up * Time.deltaTime * speed);
     }
 

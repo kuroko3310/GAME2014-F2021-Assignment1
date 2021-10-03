@@ -91,6 +91,7 @@ public class AlienBehaviour : MonoBehaviour
 
     public void SpawnMothership()
     {
+        mothershipPrefab.transform.localScale = new Vector3(0.5f, 0.5f, 0f);
         Instantiate(mothershipPrefab, mothershipSpawnPos, Quaternion.identity);
         mothershipTimer = Random.Range(MOTHERSHIP_MIN, MOTHERSHIP_MAX);
 
