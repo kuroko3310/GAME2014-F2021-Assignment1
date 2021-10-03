@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 332838439118190923}
   - component: {fileID: 5442324104325580017}
-  - component: {fileID: 6476198240364826602}
+  - component: {fileID: -8960513950561890057}
+  - component: {fileID: 6943616089203247363}
+  - component: {fileID: 2632036272681616500}
   m_Layer: 0
   m_Name: PlayerBullet1
   m_TagString: Untagged
@@ -84,16 +86,54 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!65 &6476198240364826602
-BoxCollider:
+--- !u!114 &-8960513950561890057
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5909670569856293893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c079cf2c431214bbcfeefbed3695ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &6943616089203247363
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5909670569856293893}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.00047425926, y: -0.0009484291}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 0.5, y: 0.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.12445223, y: 0.3904171, z: 0.2}
-  m_Center: {x: 0.00017976761, y: -0.005844593, z: 0}
+  m_Size: {x: 0.12724522, y: 0.37859392}
+  m_EdgeRadius: 0
+--- !u!114 &2632036272681616500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5909670569856293893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dee1cf76a9bd77f44b47dda2bc2a510a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seconds: 1.5

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7004278790431313565}
   - component: {fileID: 7004278790431313564}
   - component: {fileID: 7004278790431313567}
-  - component: {fileID: 7004278790431313566}
+  - component: {fileID: 6984015255520649111}
   m_Layer: 0
   m_Name: LifePickup
   m_TagString: Untagged
@@ -104,16 +104,29 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &7004278790431313566
-BoxCollider:
+--- !u!61 &6984015255520649111
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7004278790431313561}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.002765268, y: -0.00460881}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.49194056, y: 0.6449704, z: 0.2}
-  m_Center: {x: 0.009181708, y: -0.024484873, z: 0}
+  m_Size: {x: 0.5077792, y: 0.6405128}
+  m_EdgeRadius: 0

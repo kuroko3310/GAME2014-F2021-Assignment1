@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 699143007291862998}
   - component: {fileID: 6809137017454801774}
-  - component: {fileID: 1669002040346680175}
+  - component: {fileID: -6086050581461975740}
+  - component: {fileID: -3946012566322539785}
   m_Layer: 0
   m_Name: Playership
   m_TagString: Untagged
@@ -84,16 +85,42 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!65 &1669002040346680175
-BoxCollider:
+--- !u!61 &-6086050581461975740
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7897872696417401218}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0014227331, y: -0.01849544}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 0.5, y: 0.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.37526232, y: 0.40021014, z: 0.2}
-  m_Center: {x: 0.009701818, y: -0.04989493, z: 0}
+  m_Size: {x: 0.3757484, y: 0.354882}
+  m_EdgeRadius: 0
+--- !u!114 &-3946012566322539785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7897872696417401218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b051bcd39e46f0346abc44ae00fe76ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 5909670569856293893, guid: b959662afa857454ba26b818f74489d6, type: 3}
