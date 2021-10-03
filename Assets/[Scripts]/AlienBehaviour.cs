@@ -9,7 +9,7 @@ public class AlienBehaviour : MonoBehaviour
 
     private Vector3 hMoveDistance = new Vector3(0.05f, 0, 0);
     private Vector3 vMoveDistance = new Vector3(0, 0.1f, 0);
-    private Vector3 mothershipSpawnPos = new Vector3(3.5f, 3.5f, 0);
+    private Vector3 mothershipSpawnPos = new Vector3(2.5f, 2.5f, 0);
 
     private const float MAX_LEFT = -1.9f;
     private const float MAX_RIGHT = 1.9f;

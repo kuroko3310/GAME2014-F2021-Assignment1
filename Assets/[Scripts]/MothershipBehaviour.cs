@@ -7,7 +7,7 @@ public class MothershipBehaviour : MonoBehaviour
     public int scoreValue;
 
     private const float MAX_LEFT = -4f;
-    private float speed = 5;
+    private float speed = 3;
 
     // Update is called once per frame
     void Update()

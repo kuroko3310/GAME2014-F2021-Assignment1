@@ -12,7 +12,8 @@ public class PlayerBehaviour : MonoBehaviour
     private float speed = 3.0f;
     private bool isShooting;
     private float fireRate = 0.5f;
-   
+    private bool isMovingLeft;
+    private bool isMovingRight;
 
     // Update is called once per frame
     void Update()
@@ -23,17 +24,45 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D) && transform.position.x < MAX_RIGHT)
             transform.Translate(Vector2.right * Time.deltaTime * speed);
+
         if (Input.GetKey(KeyCode.Space) && !isShooting)
             StartCoroutine(Shoot());
 #endif
+        if(isMovingLeft && transform.position.x > MAX_LEFT)
+            transform.Translate(Vector2.left * Time.deltaTime * speed);
+        if (isMovingRight && transform.position.x < MAX_RIGHT)
+            transform.Translate(Vector2.right * Time.deltaTime * speed);
+
     }
 
     private IEnumerator Shoot()
     {
         isShooting = true;
-        Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        Vector3 BulletSpawnPos = new Vector3(transform.position.x + 0.05f, transform.position.y + 0.25f, transform.position.z);
+        Instantiate(bulletPrefab, BulletSpawnPos, Quaternion.identity);
         yield return new WaitForSeconds(fireRate);
         isShooting = false;
     }
 
+    public void LeftButtonDown()
+    {
+        isMovingLeft = true;
+    }
+
+    public void RightButtonDown()
+    {
+        isMovingRight = true;
+    }
+
+    public void DirectionReleased()
+    {
+        isMovingLeft = false;
+        isMovingRight = false;
+    }
+
+    public void ShootButton()
+    {
+        if (!isShooting)
+            StartCoroutine(Shoot());
+    }
 }
