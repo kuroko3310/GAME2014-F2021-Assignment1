@@ -9,6 +9,8 @@ This is a clone or-so of Space Invaders made for mobile
 
 Script Description:
 This is for the UI buttons to transverse to different scenes
+
+Code Source: GAME2014-F2021-Lab2 by Tom Tsiliopoulos
  */
 
 using System.Collections;

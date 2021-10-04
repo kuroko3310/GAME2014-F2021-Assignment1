@@ -9,6 +9,9 @@ This is a clone or-so of Space Invaders made for mobile
 
 Script Description:
 It's a script to make the background move
+
+Code Source: Invaders from OuterSpace by Comp-3 Interactive
+https://www.youtube.com/watch?v=JfICj5yp44k&list=PLfhbBaEcybmhGhADxKSqqliuCLg3xY_ep
  */
 using System.Collections;
 using System.Collections.Generic;

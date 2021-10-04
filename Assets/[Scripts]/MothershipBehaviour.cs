@@ -9,6 +9,9 @@ This is a clone or-so of Space Invaders made for mobile
 
 Script Description:
 A script for a unique enemy, mothership or UFO that pass across the screen every half a minute or so
+
+Code Source: Invaders from OuterSpace by Comp-3 Interactive
+https://www.youtube.com/watch?v=JfICj5yp44k&list=PLfhbBaEcybmhGhADxKSqqliuCLg3xY_ep
  */
 using System.Collections;
 using System.Collections.Generic;

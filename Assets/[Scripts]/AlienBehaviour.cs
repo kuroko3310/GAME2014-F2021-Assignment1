@@ -9,6 +9,9 @@ This is a clone or-so of Space Invaders made for mobile
 
 Script Description:
 This is the main script for the enemies(aliens) to program their mechanics such as movement, shoot, and spawn
+
+Code Source: Invaders from OuterSpace by Comp-3 Interactive
+https://www.youtube.com/watch?v=JfICj5yp44k&list=PLfhbBaEcybmhGhADxKSqqliuCLg3xY_ep
  */
 
 using System.Collections;

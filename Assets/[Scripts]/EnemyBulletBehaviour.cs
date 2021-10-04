@@ -9,6 +9,9 @@ This is a clone or-so of Space Invaders made for mobile
 
 Script Description:
 A script for the enemy's bullet, almost the same as the player's
+
+Code Source: Invaders from OuterSpace by Comp-3 Interactive
+https://www.youtube.com/watch?v=JfICj5yp44k&list=PLfhbBaEcybmhGhADxKSqqliuCLg3xY_ep
  */
 
 using System.Collections;
