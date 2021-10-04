@@ -1,3 +1,16 @@
+/* 
+GAME2014-F2021-Assignment1 by Jen Marc Capistrano
+Student #: 101218004
+Last Modified: 3 October 2021
+Course: GAME2014-F2021-Tom Tsiliopoulos
+
+Program Description:
+This is a clone or-so of Space Invaders made for mobile
+
+Script Description:
+This is the main script for the enemies(aliens) to program their mechanics such as movement, shoot, and spawn
+ */
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
